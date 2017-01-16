@@ -14,5 +14,7 @@
 3. Template - defines the set of features to be used while training the tagger
 
 ## Run your tagger
+```crf
 crf_learn template train.txt model
 crf_test model test.txt
+```
