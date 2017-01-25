@@ -1,0 +1,32 @@
+# Chunking
+
+Chunking refers to dividing a text into syntactically correlated parts of words.
+For example, the sentence “He reckons the current account deficit will narrow to only # 1.8 billion in September.” 
+can be divided as follows:
+
+B-NP He
+B-VP reckons
+B-NP the
+I-NP current
+I-NP account
+I-NP deficit
+B-VP will
+I-VP narrow
+B-PP to
+B-NP only
+I-NP #
+I-NP 1.8
+I-NP billion
+B-PP in
+B-NP September
+O    .
+
+The output is in IOB format where B refers to Beginning of a phrase, I is inside and O is for outside the phrase.
+
+# Creating and Testing a Chunker
+
+```python
+crf_learn template train.txt model
+crf_test -m model test.txt > output.txt
+```
+## Template file for chunking is available.
